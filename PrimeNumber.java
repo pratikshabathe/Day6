@@ -7,6 +7,7 @@ public class PrimeNumber {
 		System.out.println("enter the number to generate primes");
 		int n = sc.nextInt();
 		sc.close();
+		
 		for (int i = 1; i <= n; i++) {
 			boolean isPrime = true;
 			
