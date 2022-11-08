@@ -8,9 +8,8 @@ public class DayOfWeek {
 		int m = 0;
 		Scanner scanner = new Scanner(System.in);
 		boolean keepGoing = true;
-		boolean keepGoing1 = true; 
 		
-		while(keepGoing1) {
+		while(keepGoing) {
 			System.out.println("Month");
 			m = scanner.nextInt();
 			if(m < 1 || m>=12) {
@@ -36,28 +35,29 @@ public class DayOfWeek {
 	        int x = y0 + y0/4 - y0/100 +y0/400;
 	        int m0 = m + 12 * ((14 - m) / 12) - 2;
 	        int d0 = (d + x + 31 * m0 / 12) % 7;  
-	        boolean c = 1<= d0 && d0 <= 6;
-
+	        boolean c = ( 1<= d0 && d0 <= 6);
+	        
+	        String b = null;
 	          if (c) {
-	            String b = "Sunday";
+	             b = "Sunday";
 	          } else {
 	            if (c) {
-	              String b = "Monday";
+	               b = "Monday";
 	            } else {
 	              if (c) {
-	                String b = "Tuesday";
+	                 b = "Tuesday";
 	            } else {
 	              if (c) {
-	                String b = "Wednesday";
+	                 b = "Wednesday";
 	              } else {
 	                if (c) {
-	                  String b = "Thursday";
+	                   b = "Thursday";
 	                } else {
 	                  if (c) {
-	                    String b = "Friday";
+	                     b = "Friday";
 	                  } else {
 	                    if (c) {
-	                      String b = "Saturday";
+	                       b = "Saturday";
 	                    }                 
 	                   }
 	                  }
@@ -65,10 +65,9 @@ public class DayOfWeek {
 	             }
 	             }
 	          }
-		
-
-	        System.out.println("The day of the week is ");
+			System.out.println("The day of the week is " +b);
 	    }
 
 	}
+
 }
